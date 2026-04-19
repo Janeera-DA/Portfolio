@@ -1,0 +1,400 @@
+/**
+ * Janeera Portfolio — Custom Docusaurus Theme
+ * Palette: Deep teal + warm off-white + soft gold accents
+ */
+
+:root {
+  --ifm-color-primary: #0d6e8a;
+  --ifm-color-primary-dark: #0b6079;
+  --ifm-color-primary-darker: #0a5a72;
+  --ifm-color-primary-darkest: #08495d;
+  --ifm-color-primary-light: #0f7c9b;
+  --ifm-color-primary-lighter: #1082a2;
+  --ifm-color-primary-lightest: #1494b8;
+
+  --ifm-font-family-base: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --ifm-heading-font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(13, 110, 138, 0.08);
+
+  --portfolio-gold: #c9952a;
+  --portfolio-bg-soft: #f8f9fb;
+  --portfolio-card-bg: #ffffff;
+  --portfolio-border: #e4e8ef;
+  --portfolio-text-muted: #5a6577;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4dbcd8;
+  --ifm-color-primary-dark: #35b4d3;
+  --ifm-color-primary-darker: #2aaecf;
+  --ifm-color-primary-darkest: #1d99ba;
+  --ifm-color-primary-light: #65c4dd;
+  --ifm-color-primary-lighter: #70c8e0;
+  --ifm-color-primary-lightest: #96d8ea;
+
+  --docusaurus-highlighted-code-line-bg: rgba(77, 188, 216, 0.1);
+
+  --portfolio-gold: #e0b84a;
+  --portfolio-bg-soft: #1a1d23;
+  --portfolio-card-bg: #22262e;
+  --portfolio-border: #2e3340;
+  --portfolio-text-muted: #9aa3b2;
+}
+
+/* ── Global ── */
+body {
+  font-family: var(--ifm-font-family-base);
+}
+
+/* ── Navbar ── */
+.navbar {
+  box-shadow: 0 1px 0 var(--portfolio-border);
+}
+
+/* ── Hero Banner ── */
+.hero-banner {
+  background: linear-gradient(135deg, #0d3d4f 0%, #0d6e8a 60%, #1494b8 100%);
+  color: white;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(ellipse at 70% 40%, rgba(20, 148, 184, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.hero-banner .hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.88;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.85rem;
+  margin: 0.3rem;
+  backdrop-filter: blur(4px);
+}
+
+.hero-cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-cta a.btn-primary {
+  background: white;
+  color: var(--ifm-color-primary-darkest);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.hero-cta a.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.hero-cta a.btn-outline {
+  border: 2px solid rgba(255,255,255,0.7);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.15s;
+}
+
+.hero-cta a.btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem 2rem;
+  background: var(--portfolio-bg-soft);
+  border-bottom: 1px solid var(--portfolio-border);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--portfolio-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ── Section ── */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  color: var(--ifm-heading-color);
+}
+
+.section-divider {
+  width: 48px;
+  height: 4px;
+  background: var(--portfolio-gold);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  background: var(--portfolio-card-bg);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 0.92rem;
+  color: var(--portfolio-text-muted);
+  line-height: 1.6;
+}
+
+/* ── Skills Pills ── */
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.skill-pill {
+  background: rgba(13, 110, 138, 0.1);
+  color: var(--ifm-color-primary-dark);
+  border: 1px solid rgba(13, 110, 138, 0.2);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .skill-pill {
+  background: rgba(77, 188, 216, 0.1);
+  color: var(--ifm-color-primary-light);
+  border-color: rgba(77, 188, 216, 0.25);
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--portfolio-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.45rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  border: 2px solid var(--portfolio-card-bg);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--portfolio-gold);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  color: var(--portfolio-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-bullets li {
+  font-size: 0.92rem;
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  color: var(--portfolio-text-muted);
+}
+
+.timeline-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+}
+
+/* ── Award Cards ── */
+.award-card {
+  background: linear-gradient(135deg, var(--portfolio-card-bg), var(--portfolio-bg-soft));
+  border: 1px solid var(--portfolio-border);
+  border-left: 4px solid var(--portfolio-gold);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.award-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.award-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.award-org {
+  font-size: 0.85rem;
+  color: var(--portfolio-text-muted);
+}
+
+/* ── LinkedIn Section ── */
+.linkedin-cta {
+  background: linear-gradient(135deg, #0a66c2, #0d84f0);
+  color: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.linkedin-cta h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.linkedin-cta p {
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.linkedin-cta a {
+  background: white;
+  color: #0a66c2;
+  padding: 0.65rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-banner h1 { font-size: 2rem; }
+  .hero-banner .hero-subtitle { font-size: 1rem; }
+  .stats-bar { gap: 1.5rem; }
+  .section { padding: 2.5rem 1rem; }
+}
