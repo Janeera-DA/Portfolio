@@ -8,10 +8,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://janeerada.github.io',
-  baseUrl: '/janeera-portfolio/',
+  baseUrl: '/portfolio/',
 
   organizationName: 'janeerada',
-  projectName: 'janeera-portfolio',
+  projectName: 'portfolio',
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
