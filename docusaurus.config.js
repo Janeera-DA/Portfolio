@@ -13,6 +13,7 @@ const config = {
   organizationName: 'janeera-da',
   projectName: 'Portfolio',
   trailingSlash: false,
+  future: {}, 
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
