@@ -7,10 +7,10 @@ const config = {
   tagline: 'Senior Technical Author · Documentation Lead · Docs-as-Code Specialist',
   favicon: 'img/favicon.ico',
 
-  url: 'https://janeerada.github.io',
+  url: 'https://janeera-da.github.io',
   baseUrl: '/portfolio/',
 
-  organizationName: 'janeerada',
+  organizationName: 'janeera-da',
   projectName: 'portfolio',
   trailingSlash: false,
 
